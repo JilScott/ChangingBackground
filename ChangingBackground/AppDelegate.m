@@ -12,8 +12,11 @@
 @interface AppDelegate () {
     UIWindow *window;
 }
-@end
 
+@property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) UIImageView *greenImageView;
+
+@end
 
 @implementation AppDelegate
 
@@ -22,12 +25,61 @@
     [window makeKeyAndVisible];
     
     FirstViewController *firstViewController = FirstViewController.new;
-    UINavigationController *navigationController = [UINavigationController.alloc initWithRootViewController:firstViewController];
-    [navigationController setNavigationBarHidden:YES];
+    self.navigationController = [UINavigationController.alloc initWithRootViewController:firstViewController];
+    [self.navigationController setNavigationBarHidden:YES];
 
-    window.rootViewController = navigationController;
+    window.rootViewController = self.navigationController;
+    self.navigationController.delegate = self;
+    [self addBackgrounds];
     
     return YES;
+}
+
+- (void)addBackgrounds {
+    [self.navigationController.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue"]]];
+    
+    self.greenImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"green"]];
+    self.greenImageView.alpha = 0;
+    [self.navigationController.view addSubview:self.greenImageView];
+    [self.navigationController.view sendSubviewToBack:self.greenImageView];
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    if ([viewController isKindOfClass:[FirstViewController class]]) {
+        [self animateTransitionToColor:@"blue"];
+    } else {
+        [self animateTransitionToColor:@"green"];
+    }
+    
+}
+
+- (void)animateTransitionToColor:(NSString *)color {
+    if ([color isEqualToString:@"blue"]) {
+
+    [UIView animateWithDuration:1.5f
+                          delay:0.f
+                        options:UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         //self.blueImageView.alpha = 1;
+                            self.greenImageView.alpha = 0;
+                     }
+                     completion:^(BOOL finished) {
+                         
+                     }];
+    } else if ([color isEqualToString:@"green"]) {
+        
+        [UIView animateWithDuration:1.5f
+                              delay:0.f
+                            options:UIViewAnimationOptionTransitionCrossDissolve
+                         animations:^{
+                             // self.blueImageView.alpha = 0;
+                             self.greenImageView.alpha = 1;
+                         }
+                         completion:^(BOOL finished) {
+                             
+                         }];
+    }
 }
 
 @end

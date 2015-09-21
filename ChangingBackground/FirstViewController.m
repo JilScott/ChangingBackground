@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "AnimationObject.h"
 
 @interface FirstViewController ()
 
