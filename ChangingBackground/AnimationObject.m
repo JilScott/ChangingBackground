@@ -9,6 +9,7 @@
 #import "AnimationObject.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "UIColor+UIColor_ChangingBackgrounds.h"
 
 @implementation AnimationObject
 
@@ -39,9 +40,6 @@
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
-    UIImage *greenImage = [UIImage imageNamed:@"green"];
-    UIImage *blueImage = [UIImage imageNamed:@"blue"];
-    
     CGRect inBoundsFrame = [[transitionContext containerView] bounds];
     CGRect leftOfBoundsFrame = inBoundsFrame;
     leftOfBoundsFrame.origin.x -=320;
@@ -66,7 +64,7 @@
                               duration:self.duration
                                options:UIViewAnimationOptionTransitionCrossDissolve
                             animations:^{
-                                transitionContext.containerView.backgroundColor = [UIColor colorWithPatternImage:blueImage];
+                                transitionContext.containerView.backgroundColor = [UIColor blueImage];
                                 
                             } completion:^(BOOL finished) {
                                 [transitionContext completeTransition:YES];
@@ -93,7 +91,7 @@
                               duration:self.duration
                                options:UIViewAnimationOptionTransitionCrossDissolve
                             animations:^{
-                                transitionContext.containerView.backgroundColor = [UIColor colorWithPatternImage:greenImage];
+                                transitionContext.containerView.backgroundColor = [UIColor greenImage];
                                 
                             } completion:^(BOOL finished) {
                                 [transitionContext completeTransition:YES];

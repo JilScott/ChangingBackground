@@ -25,6 +25,7 @@
 		001809ED171C6764002D3E93 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 001809E9171C6764002D3E93 /* green.png */; };
 		001809EE171C6764002D3E93 /* green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 001809EA171C6764002D3E93 /* green@2x.png */; };
 		8EC61C291BB0684700572CAF /* AnimationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC61C281BB0684700572CAF /* AnimationObject.m */; };
+		8EC61C2F1BB1F8A200572CAF /* UIColor+UIColor_ChangingBackgrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC61C2E1BB1F8A200572CAF /* UIColor+UIColor_ChangingBackgrounds.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		001809EA171C6764002D3E93 /* green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green@2x.png"; sourceTree = "<group>"; };
 		8EC61C271BB0684700572CAF /* AnimationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationObject.h; sourceTree = "<group>"; };
 		8EC61C281BB0684700572CAF /* AnimationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationObject.m; sourceTree = "<group>"; };
+		8EC61C2D1BB1F8A200572CAF /* UIColor+UIColor_ChangingBackgrounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColor_ChangingBackgrounds.h"; sourceTree = "<group>"; };
+		8EC61C2E1BB1F8A200572CAF /* UIColor+UIColor_ChangingBackgrounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColor_ChangingBackgrounds.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +102,7 @@
 		001809BE171C637E002D3E93 /* ChangingBackground */ = {
 			isa = PBXGroup;
 			children = (
-				8EC61C271BB0684700572CAF /* AnimationObject.h */,
-				8EC61C281BB0684700572CAF /* AnimationObject.m */,
+				8EC61C301BB1FAF900572CAF /* AnimationResources */,
 				001809EF171C6768002D3E93 /* BackgroundImages */,
 				001809D5171C63FC002D3E93 /* AppDelegate */,
 				001809DC171C6453002D3E93 /* ViewControllers */,
@@ -170,6 +172,17 @@
 				001809EA171C6764002D3E93 /* green@2x.png */,
 			);
 			name = BackgroundImages;
+			sourceTree = "<group>";
+		};
+		8EC61C301BB1FAF900572CAF /* AnimationResources */ = {
+			isa = PBXGroup;
+			children = (
+				8EC61C271BB0684700572CAF /* AnimationObject.h */,
+				8EC61C281BB0684700572CAF /* AnimationObject.m */,
+				8EC61C2D1BB1F8A200572CAF /* UIColor+UIColor_ChangingBackgrounds.h */,
+				8EC61C2E1BB1F8A200572CAF /* UIColor+UIColor_ChangingBackgrounds.m */,
+			);
+			name = AnimationResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +259,7 @@
 				001809C5171C637E002D3E93 /* main.m in Sources */,
 				001809C9171C637E002D3E93 /* AppDelegate.m in Sources */,
 				001809D9171C6448002D3E93 /* FirstViewController.m in Sources */,
+				8EC61C2F1BB1F8A200572CAF /* UIColor+UIColor_ChangingBackgrounds.m in Sources */,
 				001809E0171C64E4002D3E93 /* SecondViewController.m in Sources */,
 				8EC61C291BB0684700572CAF /* AnimationObject.m in Sources */,
 			);

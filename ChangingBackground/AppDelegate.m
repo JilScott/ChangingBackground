@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FirstViewController.h"
+#import "UIColor+UIColor_ChangingBackgrounds.h"
 
 @interface AppDelegate () {
     UIWindow *window;
@@ -24,6 +25,7 @@
     FirstViewController *firstViewController = FirstViewController.new;
     UINavigationController *navigationController = [UINavigationController.alloc initWithRootViewController:firstViewController];
     [navigationController setNavigationBarHidden:YES];
+    [navigationController.view setBackgroundColor:[UIColor blueImage]];
 
     window.rootViewController = navigationController;
     
