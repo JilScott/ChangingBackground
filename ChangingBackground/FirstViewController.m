@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     self.navigationController.delegate = self;
-    //self.navigationController.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"blue"]];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)

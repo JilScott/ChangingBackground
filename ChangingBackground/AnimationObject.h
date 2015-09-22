@@ -28,8 +28,4 @@
 
 @property (strong, nonatomic) id<UIViewControllerContextTransitioning>transitionContext;
 
-@property (strong, nonatomic) UIImageView *fadeView;
-//- (void)fadeOut;
-//- (void)fadeIn;
-
 @end
