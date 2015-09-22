@@ -21,4 +21,19 @@
     [self.navigationController pushViewController:secondViewController animated:YES];
 }
 
+- (void)viewDidLoad {
+    self.navigationController.delegate = self;
+    //self.navigationController.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"blue"]];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)
+            navigationController:(UINavigationController *)navigationController
+ animationControllerForOperation:(UINavigationControllerOperation)operation
+              fromViewController:(UIViewController *)fromVC
+                toViewController:(UIViewController *)toVC {
+    
+    AnimationObject *animationController = [[AnimationObject alloc] init];
+    return animationController;
+}
+
 @end

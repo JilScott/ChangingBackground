@@ -26,4 +26,10 @@
 /*! The options for the transition animation. Use this to change the type of animation. 0 by default. */
 @property (nonatomic) UIViewAnimationOptions options;
 
+@property (strong, nonatomic) id<UIViewControllerContextTransitioning>transitionContext;
+
+@property (strong, nonatomic) UIImageView *fadeView;
+//- (void)fadeOut;
+//- (void)fadeIn;
+
 @end
